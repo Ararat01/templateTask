@@ -1,0 +1,85 @@
+.search {
+    min-width: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #F9F9F9;
+    border: 1px solid #D1D1D1;
+    border-radius: 12px;
+    padding: 9px 16px;
+    .hr_vertical {
+        width: 1px;
+        height: 20px;
+        background-color: #D1D1D1;
+        margin: 0 24px;
+    }
+    &__categories {
+        position: relative;
+        &__btn {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            text-align: left;
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 22px;
+            color: #151515;
+            background-color: transparent;
+            &__name {
+                max-width : 160px;
+                overflow:hidden;
+                text-overflow: ellipsis;
+            }
+            .chevron_up {
+                transition: 0.3s;
+                transform: rotateZ(180deg);
+            }
+            .chevron_down {
+                transition: 0.3s;
+                transform: rotateZ(0deg);
+            }
+        }
+        &__div {
+            position: absolute;
+            left: 0;
+            background: #F9F9F9;
+            border: 1px solid #D1D1D1;
+            border-radius: 12px;
+            padding: 16px 12px;
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 20px;
+            color: #151515;
+            white-space: nowrap;
+            li {
+                margin: 3px 0;
+                cursor: pointer;
+            }
+        }
+    }
+    &__form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        &__input {
+            width: 100%;
+            background-color: transparent;
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+            color: #151515;
+            &::placeholder {
+                color: #A9A9A9;
+            }
+        }
+        &__btn {
+            background-color: transparent;
+        }
+    }
+}

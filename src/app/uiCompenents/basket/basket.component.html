@@ -1,0 +1,56 @@
+<div class="basket">
+    <button 
+        (click)="openBasket()"
+        class="basket__btn"
+    ><img src="assets/icons/basket.png" alt=""></button>
+    <div (clickOutside)="closeBasket()" class="basket__view" [ngClass]="basketActive ? 'basket__view-active' : ''">
+        <div class="basket__view__list">
+            <button (click)="closeBasket()" class="basket__close">Close</button>
+            <h3 class="basket__title">Shopping cart</h3>
+            <div *ngFor="let product of basketItems" class="basket__products">
+                <div class="basketItem">
+                    <div class="basketItem__actions">
+                        <div class="basketItem__img">
+                            <img src="assets/images/product.jpg" alt="">
+                        </div>
+                        <div class="basketItem__act">
+                            <ul>
+                                <li><button><img [src]="product.wishlist ? 'assets/icons/wishlist-active.png' : 'assets/icons/wishlist-passive.png'" alt="">Wishlist</button></li>
+                                <li><button><img src="assets/icons/compare.png" alt="">Compare</button></li>
+                                <li><button><img src="assets/icons/remove.png" alt="">Remove</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="basketItem__info">
+                        <h5 class="basketItem__title">{{product.title}}</h5>
+                        <table class="basketItem__about">
+                            <tr>
+                                <th>Farm:</th>
+                                <td>{{product.farm}}</td>
+                            </tr>
+                            <tr>
+                                <th>Freshness:</th>
+                                <td>{{product.freshness}}</td>
+                            </tr>
+                        </table>
+                        <img *ngFor="let num of starsCount(product.id - 1)" src="assets/icons/star-active.png" alt="none">
+                        <img *ngFor="let num of starsPassiveCount(product.id - 1)" src="assets/icons/star-passive.png" alt="none">
+                        <h6 class="basketItem__price">{{product.price | discount:product.discount}}{{product.currency}}</h6>
+                        <span *ngIf="product.discount !== 0" class="basketItem__price basketItem__price_discounted">{{product.price}}{{product.currency}}</span>
+                    </div>
+                </div>
+                <hr class="after_product">
+            </div>
+        </div>
+        <div class="basket__total">
+            <div class="basket__total__text">
+                <p>Subtotal</p>
+                <h4 class="basket__total__price">{{basketTotal}}USD</h4>
+            </div>
+            <div class="continue_or_checkout">
+                <button class="continue_btn" (click)="closeBasket()">Continue shopping</button>
+                <button class="checkout_btn" (click)="openBasket()">Go to Checkout</button>
+            </div>
+        </div>
+    </div>
+</div>

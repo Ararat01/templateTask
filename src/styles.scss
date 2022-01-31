@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "assets/nullstyle.scss";
+
+body {
+    background: #F9F9F9;
+}
+.container {
+    width: 1260px;
+    margin: 0 auto;
+}
+.prl45 {
+    padding: 0 45px;
+}

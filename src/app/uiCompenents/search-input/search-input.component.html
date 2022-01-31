@@ -1,0 +1,19 @@
+<div class="search">
+    <div class="search__categories">
+        <button class="search__categories__btn" (click)="open_categories()"><span class="search__categories__btn__name">{{categoryName}}</span><img [ngClass]="categoriesOpened ?' chevron_up' : 'chevron_down'" src="assets/icons/chevron.png" alt=""></button>
+        <div *ngIf="categoriesOpened" class="search__categories__div">
+            <ul>
+                <li (click)="changeCategoryName('All categories')">All categories</li>
+                <li (click)="changeCategoryName('Bakery')">Bakery</li>
+                <li (click)="changeCategoryName('Fruit and vegetables')">Fruit and vegetables</li>
+                <li (click)="changeCategoryName('Meat and fish')">Meat and fish</li>
+                <li (click)="changeCategoryName('Drink')">Drink</li>
+            </ul>
+        </div>
+    </div>
+    <div class="hr_vertical"></div>
+    <form class="search__form" action="">
+        <input placeholder="Search Products, categories ..." class="search__form__input" type="text" name="" id="">
+        <button class="search__form__btn"><img src="assets/icons/search.png" alt=""></button>
+    </form>
+</div>
