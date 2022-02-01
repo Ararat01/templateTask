@@ -10,13 +10,13 @@ export interface productsInterface {
 }
 
 
-export const initStateOfUsers: productsInterface = {
+export const initStateOfProducts: productsInterface = {
     products: []
 }
 
 
 export const productsReducer = createReducer(
-    initStateOfUsers,
+    initStateOfProducts,
     on(allProducts, (state, {products}) => {
         return {    
             ...state,

@@ -10,6 +10,7 @@ import { productsSelector } from 'src/app/reducers/createReducer/createdReducers
 })
 export class HomepageComponent implements OnInit {
 
+
   productsArr!: iproduct[]
 
   constructor(private store: Store) { }

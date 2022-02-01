@@ -1,8 +1,11 @@
-<img src="assets/images/product.jpg" alt="">
-<h3>{{data.title}}</h3>
-<h3>{{data.description}}</h3>
-<div class="price">
-    <h4>{{data.price}}</h4>
-    <h4>{{data.discount}}</h4>
+<img class="smallProduct__img" src="assets/images/product.jpg" alt="">
+<h3 class="smallProduct__title">{{data.title}}</h3>
+<h3 class="smallProduct__description">{{data.description}}</h3>
+<div class="smallProduct__bottom">
+    <div class="smallProduct__price">
+        <h4>{{data.price | discount:data.discount}}{{data.currency}}</h4>
+        <h4 *ngIf="data.discount" class="smallProduct__price_discounted">{{data.price}}{{data.currency}}</h4>
+    </div>
+    <button class="smallProduct__btn" (click)="addToBasket(data)">Buy now</button>
 </div>
-<button>Buy now</button>
+<span class="smallProduct__discount">{{data.discount ? '-' + data.discount + '%' : ''}}</span>

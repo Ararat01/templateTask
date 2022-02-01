@@ -1,4 +1,76 @@
 <app-header></app-header>
-<div *ngFor="let product of productsArr; let i = index" class="small_product">
-    <app-small-product [data]="product"></app-small-product>
+<div class="bestProd container">
+    <div class="bestProd__categories">
+        <h4 class="bestProd__categories__title">Category menu</h4>
+        <ul class="bestProd__categories__list">
+            <li><a href="">Bakery</a></li>
+            <li><a href="">Fruit and vegetables</a></li>
+            <li><a href="">Meat and fish</a></li>
+            <li><a href="">Drinks</a></li>
+            <li><a href="">Kitchen</a></li>
+        </ul>
+        <button class="bestProd__categories__showMore">More products &nbsp; &nbsp; ></button>
+    </div>
+    <div class="bestProd__banners">
+        <div class="bestProd__banners__banner banner">
+            <h5 class="banner__subtitle">Banner subfocus</h5>
+            <h3 class="banner__title">Space for heading</h3>
+            <button class="banner__btn">Read recepies &nbsp; <img src="assets/icons/chevron.png" alt=""></button>
+        </div>
+        <div class="bestProd__banners__banner banner">
+            <h5 class="banner__subtitle">Banner subfocus</h5>
+            <h3 class="banner__title">Space for heading</h3>
+            <button class="banner__btn">Read recepies &nbsp; <img src="assets/icons/chevron.png" alt=""></button>
+        </div>
+    </div>
 </div>
+<div class="bestProd container">
+    <div class="bestProd__categories">
+        <h4 class="bestProd__categories__title">Best selling products</h4>
+        <ul class="bestProd__categories__list">
+            <li><a href="">Kitchen</a></li>
+            <li><a href="">Meat and fish</a></li>
+            <li><a href="">Special nutrition</a></li>
+            <li><a href="">Pharmacy</a></li>
+            <li><a href="">Baby</a></li>
+        </ul>
+        <button class="bestProd__categories__showMore">More products &nbsp; &nbsp; ></button>
+    </div>
+    <div class="bestProd__products">
+        <div *ngFor="let product of productsArr.slice(0, 3); let i = index" class="smallProduct">
+            <app-small-product [data]="product"></app-small-product>
+        </div>
+    </div>
+</div>
+<div class="bestProd container">
+    <div class="bestProd__categories">
+        <h4 class="bestProd__categories__title">Best from Farmers</h4>
+        <ul class="bestProd__categories__list">
+            <li><a href="">Carrots</a></li>
+            <li><a href="">Tomatoes</a></li>
+            <li><a href="">Potatoes</a></li>
+            <li><a href="">Chicken</a></li>
+            <li><a href="">Pork</a></li>
+        </ul>
+        <button class="bestProd__categories__showMore">More products &nbsp; &nbsp; ></button>
+    </div>
+    <div class="bestProd__products">
+        <div *ngFor="let product of productsArr.slice(1, 4);; let i = index" class="smallProduct">
+            <app-small-product [data]="product"></app-small-product>
+        </div>
+    </div>
+</div>
+<div class="someProd container">
+    <div class="someProd__info">
+        <h3 class="someProd__title">Section Headline</h3>
+        <a class="someProd__btn">Button <img src="assets/icons/chevron.png" alt=""></a>
+    </div>
+    <div class="someProd__products">
+        <div *ngFor="let product of productsArr.slice(0, 4); let i = index" class="smallProduct">
+            <app-small-product [data]="product"></app-small-product>
+        </div>
+    </div>
+    
+</div>
+<app-comments-slider></app-comments-slider>
+<app-footer></app-footer>

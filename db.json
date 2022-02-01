@@ -2,7 +2,7 @@
     "products": [
         {
             "id": 1,
-            "title": "Product title",
+            "title": "Product 1",
             "farm": "Thramis Farm",
             "freshness": "1 day old",
             "stars": 4,
@@ -14,11 +14,11 @@
         },
         {
             "id": 2,
-            "title": "Product title",
+            "title": "Product 2",
             "farm": "Thramis Farm",
             "freshness": "1 day old",
             "stars": 2,
-            "price": 36.99,
+            "price": 29.99,
             "currency": "USD",
             "discount": 0,
             "wishlist": false,
@@ -26,27 +26,52 @@
         },
         {
             "id": 3,
-            "title": "Product title",
+            "title": "Product 3",
             "farm": "Thramis Farm",
             "freshness": "1 day old",
             "stars": 3,
-            "price": 48.56,
+            "price": 40,
             "currency": "USD",
-            "discount": 36,
+            "discount": 36.49,
             "wishlist": false,
             "description": "Space for a small product description"
         },
         {
             "id": 4,
-            "title": "Product title",
+            "title": "Product 4",
             "farm": "Thramis Farm",
             "freshness": "1 day old",
             "stars": 5,
-            "price": 48.56,
+            "price": 89.99,
             "currency": "USD",
             "discount": 50,
             "wishlist": false,
             "description": "Space for a small product description"
+        }
+    ],
+    "comments": [
+        {   "id": 1,
+            "body": "“ This is an super space for your customers qoute. You will get all what you need by writiing a text here “",
+            "customer": "customer 1"
+        },
+        {   "id": 2,
+            "body": "“ This is an super space for your customers qoute. Don’t worry it works smooth as pie.“",
+            "customer": "customer 2"
+        },
+        {
+            "id": 3,
+            "body": "“ Don’t worry it works smooth as pie. You will get all what you need by writiing a text here “",
+            "customer": "customer 3"
+        },
+        {
+            "id": 4,
+            "body": "“ This is an super space for your customers qoute. You will get all what you need by writiing a text here “",
+            "customer": "customer 4"
+        },
+        {
+            "id": 5,
+            "body": "“ This is an super space for your customers qoute. Don’t worry it works smooth as pie.“",
+            "customer": "customer 5"
         }
     ]
 }

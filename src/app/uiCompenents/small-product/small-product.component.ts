@@ -1,5 +1,7 @@
 import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { iproduct } from 'src/app/interfaces/iproduct';
+import { allBasket } from 'src/app/reducers/basket';
 
 @Component({
   selector: 'app-small-product',
@@ -11,10 +13,12 @@ export class SmallProductComponent implements OnInit {
   @Input()
   data!: iproduct
 
-  constructor() { }
+  constructor(private store: Store) { }
 
   ngOnInit(): void {
-    console.log(this.data);
   }
 
+  addToBasket(product: iproduct) {
+    this.store.dispatch(allBasket({basket: product as iproduct}))
+  }
 }

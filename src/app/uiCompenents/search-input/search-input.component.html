@@ -1,6 +1,6 @@
 <div class="search">
     <div class="search__categories">
-        <button class="search__categories__btn" (click)="open_categories()"><span class="search__categories__btn__name">{{categoryName}}</span><img [ngClass]="categoriesOpened ?' chevron_up' : 'chevron_down'" src="assets/icons/chevron.png" alt=""></button>
+        <button class="search__categories__btn" (click)="open_categories()" (clickOutside)="close_categories()"><span class="search__categories__btn__name">{{categoryName}}</span><img [ngClass]="categoriesOpened ?' chevron_up' : 'chevron_down'" src="assets/icons/chevron.png" alt=""></button>
         <div *ngIf="categoriesOpened" class="search__categories__div">
             <ul>
                 <li (click)="changeCategoryName('All categories')">All categories</li>

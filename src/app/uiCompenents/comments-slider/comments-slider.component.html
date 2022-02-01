@@ -1,0 +1,15 @@
+<div class="mainSlider container">
+    <div class="mainSlider__info">
+        <h4>Our customers says</h4>
+        <a class="mainSlider__info__btn">Button <img src="assets/icons/chevron.png" alt=""></a>
+    </div>
+    <button class="slideLeft" (click)="slideToRight()"><img src="assets/icons/sliderArrow.png" alt=""></button>
+    <div class="carousel" [ngStyle]="{'width':100*commentsArr.length+'%'}">
+        <div *ngFor="let comment of commentsArr" class="comment">
+            <p class="comment__body">{{comment.body}}</p>
+            <h5 class="comment__customer">{{comment.customer}}</h5>
+            <img class="comment__img" src="assets/images/customer-profile.png" alt="">
+        </div>
+    </div>
+    <button class="slideRight" (click)="slideToLeft()"><img src="assets/icons/sliderArrow.png" alt=""></button>
+</div>

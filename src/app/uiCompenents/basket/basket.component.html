@@ -2,7 +2,7 @@
     <button 
         (click)="openBasket()"
         class="basket__btn"
-    ><img src="assets/icons/basket.png" alt=""></button>
+    ><img src="assets/icons/basket.png" alt=""><span class="basket__itemsCount" *ngIf="basketItems.length">{{basketItems.length}}</span></button>
     <div (clickOutside)="closeBasket()" class="basket__view" [ngClass]="basketActive ? 'basket__view-active' : ''">
         <div class="basket__view__list">
             <button (click)="closeBasket()" class="basket__close">Close</button>
@@ -17,7 +17,7 @@
                             <ul>
                                 <li><button><img [src]="product.wishlist ? 'assets/icons/wishlist-active.png' : 'assets/icons/wishlist-passive.png'" alt="">Wishlist</button></li>
                                 <li><button><img src="assets/icons/compare.png" alt="">Compare</button></li>
-                                <li><button><img src="assets/icons/remove.png" alt="">Remove</button></li>
+                                <li><button (click)="view(product)"><img src="assets/icons/remove.png" alt="">Remove</button></li>
                             </ul>
                         </div>
                     </div>
@@ -33,9 +33,9 @@
                                 <td>{{product.freshness}}</td>
                             </tr>
                         </table>
-                        <img *ngFor="let num of starsCount(product.id - 1)" src="assets/icons/star-active.png" alt="none">
-                        <img *ngFor="let num of starsPassiveCount(product.id - 1)" src="assets/icons/star-passive.png" alt="none">
-                        <h6 class="basketItem__price">{{product.price | discount:product.discount}}{{product.currency}}</h6>
+                        <img *ngFor="let num of starsCount(product.stars)" src="assets/icons/star-active.png" alt="none">
+                        <img *ngFor="let num of starsCount(5 - product.stars)" src="assets/icons/star-passive.png" alt="none">
+                        <h6 class="basketItem__price">{{product.price | discount:product.discount}}{{product.currency}} X {{product.count}}</h6>
                         <span *ngIf="product.discount !== 0" class="basketItem__price basketItem__price_discounted">{{product.price}}{{product.currency}}</span>
                     </div>
                 </div>

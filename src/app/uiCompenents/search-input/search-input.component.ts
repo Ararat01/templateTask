@@ -11,7 +11,11 @@ export class SearchInputComponent implements OnInit {
   categoryName: string = 'All categories';
 
   open_categories() {
-    this.categoriesOpened = !this.categoriesOpened
+    this.categoriesOpened = true
+  }
+
+  close_categories() {
+    this.categoriesOpened = false
   }
 
   changeCategoryName(category: string) {

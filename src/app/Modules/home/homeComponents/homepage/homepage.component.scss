@@ -1,7 +1,159 @@
-.small_product {
+.smallProduct {
     width: 269px;
     height: 323px;
     border: 1px solid #D1D1D1;
     border-radius: 12px;
     padding: 16px 16px 55px 16px;
+    position: relative;
+}
+
+.bestProd {
+    padding: 64px 45px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    &__categories {
+        width: 269px;
+        &__title {
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 27px;
+            color: #151515;
+            margin-bottom: 16px;
+        }
+        &__list {
+            li {
+                a {
+                    font-family: "Open Sans";
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 15px;
+                    color: #6A983C;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                &:not(:last-child) {
+                    margin-bottom: 12px;
+                }
+                &:last-child {
+                    margin-bottom: 48px;
+                }
+            }
+        }
+        &__showMore {
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 22px;
+            color: #151515;
+            background: #F5F5F5;
+            border-radius: 12px;
+            padding: 12.5px 16px;
+        }
+    }
+    &__products {
+        display: flex;
+        justify-content: flex-end;
+        .smallProduct:not(:first-child) {
+            margin-left: 32px;
+        }
+    }
+    &__banners {
+        display: flex;
+        justify-content: flex-end;
+        &__banner {
+            background-image: url('./../../../../../assets/images/bannerbg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #F4F8EC;
+            border-radius: 12px;
+            width: 420px;
+            height: 280px;
+            padding: 48px 32px 100px;
+            position: relative;
+            .banner {
+                &__subtitle {
+                    font-family: "Poppins";
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #6A983C;
+                }
+                &__title {
+                    font-family: "Poppins";
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 22px;
+                    line-height: 33px;
+                    color: #151515;
+                }
+                &__btn {
+                    background-color: transparent;
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    bottom: 32px;
+                    left: 32px;
+                    font-family: "Poppins";
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 22px;
+                    color: #151515;
+                    border: 2px solid #92C064;
+                    border-radius: 12px;
+                    padding: 12px 16px;
+                    img {
+                        transform: rotateZ(270deg);
+                    }
+                }
+            }
+        }
+        &__banner:not(:first-child) {
+            margin-left: 31px;
+        }
+    }
+}
+
+.someProd {
+    &__products {
+        display: flex;
+        justify-content: space-between;
+    }
+    padding: 70px 45px 73px;
+    background-color: #fff;
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 37px;
+    }
+    &__title {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #151515;
+    }
+    &__btn {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #151515;
+        display: flex;
+        align-items: center;
+        img {
+            transform: rotateZ(270deg);
+        }
+    }
 }

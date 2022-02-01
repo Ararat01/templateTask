@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchInputComponent } from '../search-input.component';
+import { ClickOutsideModule } from 'ng-click-outside';
 
 
 
@@ -9,7 +10,8 @@ import { SearchInputComponent } from '../search-input.component';
     SearchInputComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ClickOutsideModule
   ],
   exports: [
     SearchInputComponent
