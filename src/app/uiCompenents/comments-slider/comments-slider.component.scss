@@ -3,7 +3,9 @@
     position: relative;
     box-shadow: inset 0px -20px 20px 20px #ffffff;
     overflow: hidden;
-    border: 1px solid #F9F9F9;
+    border-top: 1px solid #F9F9F9;
+    border-bottom: 1px solid #F9F9F9;
+    border-radius: 0px;
     padding: 69px 45px 90px;
     &__info {
         font-family: "Poppins";

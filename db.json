@@ -32,7 +32,7 @@
             "stars": 3,
             "price": 40,
             "currency": "USD",
-            "discount": 36.49,
+            "discount": 25,
             "wishlist": false,
             "description": "Space for a small product description"
         },
@@ -72,6 +72,54 @@
             "id": 5,
             "body": "“ This is an super space for your customers qoute. Don’t worry it works smooth as pie.“",
             "customer": "customer 5"
+        }
+    ],
+    "blogs": [
+        {   "id": 1,
+            "body": "Space for your heding is here, write what you need",
+            "author": "Author 1",
+            "date" : "2.2.2022"
+        },
+        {   "id": 2,
+            "body": "Salat is kinda good start to your morning routines",
+            "author": "Author 2",
+            "date" : "2.1.2022"
+        },
+        {
+            "id": 3,
+            "body": "Our chef tips for a great and healthy breakfast",
+            "author": "Author 3",
+            "date" : "1.20.2022"
+        },
+        {
+            "id": 4,
+            "body": "Prepare a simple and delicious breads",
+            "author": "Author 4",
+            "date" : "1.23.2022"
+        },
+        {
+            "id": 5,
+            "body": "Which vegetable your family will love and want’s eat each day",
+            "author": "Author 5",
+            "date" : "1.28.2022"
+        },
+        {
+            "id": 6,
+            "body": "Our chef tips for a great and tasty dinner ready in 20 minutes",
+            "author": "Author 6",
+            "date" : "12.30.2021"
+        },
+        {
+            "id": 7,
+            "body": "This is a space for your blog headline, it can be long don’t worry about that",
+            "author": "Author 7",
+            "date" : "2.1.2022"
+        },
+        {
+            "id": 8,
+            "body": "Space for your heding is here, write what you need",
+            "author": "Author 8",
+            "date" : "1.15.2022"
         }
     ]
 }

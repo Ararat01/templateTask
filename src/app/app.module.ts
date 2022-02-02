@@ -9,12 +9,20 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 const route: Routes = [
   {
-    path: 'home',
+    path: '',
     loadChildren: () => import('./Modules/home/home.module').then(
       module => module.HomeModule
+    ) 
+  },
+  {
+    path: 'product',
+    loadChildren: () => import('./Modules/product/product-detail.module').then(
+      module => module.ProductDetailModule
     ) 
   }
 ];
@@ -25,6 +33,8 @@ const route: Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     RouterModule.forRoot(route, { scrollPositionRestoration: 'enabled' }),
     StoreModule.forRoot(reducers, {
       metaReducers

@@ -1,7 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { basketProduct } from 'src/app/interfaces/iproduct';
+import { removeFromBasket, wishlistBasket } from 'src/app/reducers/basket';
 import { basketSelector } from 'src/app/reducers/createReducer/createdReducers';
+import { wishlist } from 'src/app/reducers/products';
 
 @Component({
   selector: 'app-basket',
@@ -22,9 +24,15 @@ export class BasketComponent implements OnInit {
     })
   }
 
-  view(el: basketProduct) {
-    console.log(el);
-    
+  remove(product: basketProduct) {
+    this.letopen = true
+    this.store.dispatch(removeFromBasket({id: product.id}))
+  }
+
+  wishlist(product: basketProduct) {
+    this.letopen = true
+    this.store.dispatch(wishlist({id: product.id}))
+    this.store.dispatch(wishlistBasket({id: product.id}))
   }
  
   openBasket() {
@@ -32,7 +40,7 @@ export class BasketComponent implements OnInit {
     this.basketActive = true
   }
   closeBasket() {
-    this.basketActive = this.letopen ? true : false
+    this.basketActive = this.letopen
     this.letopen = false
   }
 

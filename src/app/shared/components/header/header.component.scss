@@ -1,4 +1,5 @@
 .header {
+    padding: 0 45px;
     .href {
         color: #6A983C;
         cursor: pointer;
@@ -52,5 +53,34 @@
     &__user {
         display: flex;
         align-items: center;
+    }
+}
+
+.categories {
+    background: #F9F9F9;
+    padding: 16px 45px;
+    display: flex;
+    align-items: center;
+    &__name {
+        display: flex;
+        align-items: center; 
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        color: #151515;
+        transition: 0.3s;
+        &:not(:last-child) {
+            margin-right: 43.63px;
+        } 
+        & img {
+            transition: 0.3s;
+            transform: rotateZ(0);
+        }
+        &:hover img {
+            transition: 0.3s;
+            transform: rotateZ(180deg);
+        }
     }
 }

@@ -2,13 +2,22 @@
 
 @import "assets/nullstyle.scss";
 
+
 body {
     background: #F9F9F9;
 }
 .container {
     width: 1260px;
     margin: 0 auto;
+    border-left: 2px solid #80808020;
+    border-right: 2px solid #80808020;
 }
-.prl45 {
-    padding: 0 45px;
+
+.toast-title {
+    font-family: "Poppins";
+    margin-bottom: 4px;
+}
+
+.toast-message {
+    font-family: "Poppins";
 }

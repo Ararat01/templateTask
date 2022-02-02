@@ -6,6 +6,6 @@
         <h4>{{data.price | discount:data.discount}}{{data.currency}}</h4>
         <h4 *ngIf="data.discount" class="smallProduct__price_discounted">{{data.price}}{{data.currency}}</h4>
     </div>
-    <button class="smallProduct__btn" (click)="addToBasket(data)">Buy now</button>
+    <a class="smallProduct__btn" [routerLink]="'/product/' + data.id">Buy now</a>
 </div>
 <span class="smallProduct__discount">{{data.discount ? '-' + data.discount + '%' : ''}}</span>

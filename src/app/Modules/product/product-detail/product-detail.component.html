@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="product container">
+
+</div>
+<div class="relatedProducts container">
+    <div class="relatedProducts__info">
+        <h3 class="relatedProducts__title">Related products</h3>
+        <a class="relatedProducts__btn" routerLink="/">More products <img src="assets/icons/chevron.png" alt=""></a>
+    </div>
+    <div class="relatedProducts__products">
+        <div *ngFor="let product of productsArr.slice(0, 4); let i = index" class="smallProduct">
+            <app-small-product [data]="product"></app-small-product>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

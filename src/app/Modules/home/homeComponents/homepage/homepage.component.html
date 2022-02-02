@@ -73,4 +73,46 @@
     
 </div>
 <app-comments-slider></app-comments-slider>
+<div class="blogs container">
+    <div class="blogs__info">
+        <h3 class="blogs__title">Read our Blog posts</h3>
+        <a class="blogs__btn">Go to Blog <img src="assets/icons/chevron.png" alt=""></a>
+    </div>
+    <div class="blogs__view">
+        <div class="blogs__blog_big bigBlog">
+            <div class="bigBlog__info">
+                <h3 class="bigBlog__title">{{blogsArr[0]?.body}}</h3>
+                <div class="blog__author blog__author-white">
+                    <img class="blog__author__img" src="assets/images/customer-profile.png" alt="">
+                    <p class="blog__author__name">{{blogsArr[0]?.author}}</p>
+                    <span class="blog__author__date">{{blogsArr[0]?.date}}</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="blogs__blog_vertical">
+            <img class="blogs__blog_vertical__img" src="assets/images/blog.jpg" alt="">
+            <h4 class="blogs__blog_vertical__title">{{blogsArr[1]?.body}}</h4>
+            <div class="blog__author">
+                <p class="blog__author__name">{{blogsArr[1]?.author}}</p>
+                <span class="blog__author__date">{{blogsArr[1]?.date}}</span>
+            </div>
+        </div>
+        <div class="blogs__blog_smallBlogs">
+            <div class="smallBlog" *ngFor="let blog of blogsArr.slice(2, 5)">
+                <div class="smallBlog__info">
+                    <h4 class="smallBlog__title">{{blog?.body}}</h4>
+                    <div class="blog__author">
+                        <p class="blog__author__name">{{blog?.author}}</p>
+                        <span class="blog__author__date">{{blog?.date}}</span>
+                    </div>
+                </div>
+                <img class="smallBlog__img" src="assets/images/blog.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div *ngFor="let blog of blogsArr">
+    <h1>{{blog.author}}</h1>
+</div> -->
 <app-footer></app-footer>

@@ -3,7 +3,8 @@ import { basketProduct, iproduct } from "../interfaces/iproduct";
 
 
 export const allBasket = createAction('[USER] basket get', props<{ basket: iproduct }>())
-export const removeFromBasket = createAction('[USER] basket get', props<{ id: number }>())
+export const removeFromBasket = createAction('[USER] basket remove', props<{ id: number }>())
+export const wishlistBasket = createAction('[USER] basket to wishlist', props<{ id: number }>())
 
 
 export interface basketInterface {
@@ -32,7 +33,15 @@ export const basketReducer = createReducer(
         }
         return {basket: [...state.basket, { ...product.basket, count: 1 }]}
     }),
-    on(removeFromBasket, (state) => {
-        return { basket: state.basket }
+    on(removeFromBasket, (state, {id}) => {
+        return { basket: state.basket.filter(prod => prod.id !== id) }
+    }),
+    on(wishlistBasket, (state, {id}) => {
+        return { basket: state.basket.map(prod => {
+            return prod.id !== id ? prod : {
+                ...prod,
+                wishlist: !prod.wishlist
+            }
+        })}
     })
 )

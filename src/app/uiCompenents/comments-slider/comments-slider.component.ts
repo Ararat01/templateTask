@@ -18,7 +18,6 @@ export class CommentsSliderComponent implements OnInit {
     this.store.select(commentsSelector).subscribe((v) => {
       this.commentsArr = v as icomment[];
     })
-    console.log(this.commentsArr);
   }
 
   slideToLeft() {

@@ -15,9 +15,9 @@
                         </div>
                         <div class="basketItem__act">
                             <ul>
-                                <li><button><img [src]="product.wishlist ? 'assets/icons/wishlist-active.png' : 'assets/icons/wishlist-passive.png'" alt="">Wishlist</button></li>
+                                <li><button (click)="wishlist(product)"><img [src]="product.wishlist ? 'assets/icons/wishlist-active.png' : 'assets/icons/wishlist-passive.png'" alt="">Wishlist</button></li>
                                 <li><button><img src="assets/icons/compare.png" alt="">Compare</button></li>
-                                <li><button (click)="view(product)"><img src="assets/icons/remove.png" alt="">Remove</button></li>
+                                <li><button (click)="remove(product)"><img src="assets/icons/remove.png" alt="">Remove</button></li>
                             </ul>
                         </div>
                     </div>
@@ -49,7 +49,7 @@
             </div>
             <div class="continue_or_checkout">
                 <button class="continue_btn" (click)="closeBasket()">Continue shopping</button>
-                <button class="checkout_btn" (click)="openBasket()">Go to Checkout</button>
+                <button *ngIf="basketItems.length" class="checkout_btn" (click)="openBasket()">Go to Checkout</button>
             </div>
         </div>
     </div>

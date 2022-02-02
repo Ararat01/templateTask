@@ -5,6 +5,7 @@ import { SharedModule } from 'src/app/shared/shared/shared.module';
 import { BasketModule } from 'src/app/uiCompenents/basket/basket/basket.module';
 import { SearchInputModule } from 'src/app/uiCompenents/search-input/search-input/search-input.module';
 import { BasketComponent } from 'src/app/uiCompenents/basket/basket.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -16,7 +17,8 @@ import { BasketComponent } from 'src/app/uiCompenents/basket/basket.component';
     CommonModule,
     SharedModule,
     BasketModule,
-    SearchInputModule
+    SearchInputModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent
