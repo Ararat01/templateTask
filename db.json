@@ -10,7 +10,54 @@
             "currency": "USD",
             "discount": 36,
             "wishlist": true,
-            "description": "Space for a small product description"
+            "description": "Space for a small product description",
+            "info": "Carrots from Tomissy Farm are one of the best on the market. Tomisso and his family are giving a full love to his Bio products. Tomisso’s carrots are growing on the fields naturally.",
+            "origins": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don’t grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible.",
+            "howToCook": "From roasts, salads and soups to casseroles and cakes, Carrots will lend sweetness, texture and colour to an enormous number of recipes.",
+            "vitamins": [
+                {
+                    "name": "Vitamin A equiv.",
+                    "quantity": "735 μg",
+                    "dv": 104
+                },
+                {
+                    "name": "Thiamine (B1)",
+                    "quantity": "0.066 mg",
+                    "dv": 6
+                },
+                {
+                    "name": "Niacin (B3).",
+                    "quantity": "0.983 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Folate (Bg).",
+                    "quantity": "19 μg",
+                    "dv": 5
+                },
+                {
+                    "name": "Vitamin C.",
+                    "quantity": "5.9 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Vitamin E.",
+                    "quantity": "0.66 mg",
+                    "dv": 4
+                },
+                {
+                    "name": "Vitamin K",
+                    "quantity": "13.2",
+                    "dv": 3
+                }
+            ],
+            "sku": 76645,
+            "category": "Vegetables",
+            "stock": "In Stock",
+            "buyby": ["pcs", "kgs", "box", "pack"],
+            "delivery": "in 2 days",
+            "deliveryArea": "Czech republic",
+            "freeShipping": true
         },
         {
             "id": 2,
@@ -22,7 +69,54 @@
             "currency": "USD",
             "discount": 0,
             "wishlist": false,
-            "description": "Space for a small product description"
+            "description": "Space for a small product description",
+            "info": "Carrots from Tomissy Farm are one of the best on the market. Tomisso and his family are giving a full love to his Bio products. Tomisso’s carrots are growing on the fields naturally.",
+            "origins": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don’t grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible.",
+            "howToCook": "From roasts, salads and soups to casseroles and cakes, Carrots will lend sweetness, texture and colour to an enormous number of recipes.",
+            "vitamins": [
+                {
+                    "name": "Vitamin A equiv.",
+                    "quantity": "735 μg",
+                    "dv": 104
+                },
+                {
+                    "name": "Thiamine (B1)",
+                    "quantity": "0.066 mg",
+                    "dv": 6
+                },
+                {
+                    "name": "Niacin (B3).",
+                    "quantity": "0.983 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Folate (Bg).",
+                    "quantity": "19 μg",
+                    "dv": 5
+                },
+                {
+                    "name": "Vitamin C.",
+                    "quantity": "5.9 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Vitamin E.",
+                    "quantity": "0.66 mg",
+                    "dv": 4
+                },
+                {
+                    "name": "Vitamin K",
+                    "quantity": "13.2",
+                    "dv": 3
+                }
+            ],
+            "sku": 76645,
+            "category": "Vegetables",
+            "stock": "In Stock",
+            "buyby": ["pcs", "kgs", "box", "pack"],
+            "delivery": "in 2 days",
+            "deliveryArea": "Russia",
+            "freeShipping": false
         },
         {
             "id": 3,
@@ -34,7 +128,54 @@
             "currency": "USD",
             "discount": 25,
             "wishlist": false,
-            "description": "Space for a small product description"
+            "description": "Space for a small product description",
+            "info": "Carrots from Tomissy Farm are one of the best on the market. Tomisso and his family are giving a full love to his Bio products. Tomisso’s carrots are growing on the fields naturally.",
+            "origins": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don’t grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible.",
+            "howToCook": "From roasts, salads and soups to casseroles and cakes, Carrots will lend sweetness, texture and colour to an enormous number of recipes.",
+            "vitamins": [
+                {
+                    "name": "Vitamin A equiv.",
+                    "quantity": "735 μg",
+                    "dv": 104
+                },
+                {
+                    "name": "Thiamine (B1)",
+                    "quantity": "0.066 mg",
+                    "dv": 6
+                },
+                {
+                    "name": "Niacin (B3).",
+                    "quantity": "0.983 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Folate (Bg).",
+                    "quantity": "19 μg",
+                    "dv": 5
+                },
+                {
+                    "name": "Vitamin C.",
+                    "quantity": "5.9 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Vitamin E.",
+                    "quantity": "0.66 mg",
+                    "dv": 4
+                },
+                {
+                    "name": "Vitamin K",
+                    "quantity": "13.2",
+                    "dv": 3
+                }
+            ],
+            "sku": 76645,
+            "category": "Fruit",
+            "stock": "In Stock",
+            "buyby": ["pcs", "kgs", "box", "pack"],
+            "delivery": "in 3 days",
+            "deliveryArea": "USA",
+            "freeShipping": true
         },
         {
             "id": 4,
@@ -46,7 +187,54 @@
             "currency": "USD",
             "discount": 50,
             "wishlist": false,
-            "description": "Space for a small product description"
+            "description": "Space for a small product description",
+            "info": "Carrots from Tomissy Farm are one of the best on the market. Tomisso and his family are giving a full love to his Bio products. Tomisso’s carrots are growing on the fields naturally.",
+            "origins": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don’t grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible.",
+            "howToCook": "From roasts, salads and soups to casseroles and cakes, Carrots will lend sweetness, texture and colour to an enormous number of recipes.",
+            "vitamins": [
+                {
+                    "name": "Vitamin A equiv.",
+                    "quantity": "735 μg",
+                    "dv": 104
+                },
+                {
+                    "name": "Thiamine (B1)",
+                    "quantity": "0.066 mg",
+                    "dv": 6
+                },
+                {
+                    "name": "Niacin (B3).",
+                    "quantity": "0.983 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Folate (Bg).",
+                    "quantity": "19 μg",
+                    "dv": 5
+                },
+                {
+                    "name": "Vitamin C.",
+                    "quantity": "5.9 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Vitamin E.",
+                    "quantity": "0.66 mg",
+                    "dv": 4
+                },
+                {
+                    "name": "Vitamin K",
+                    "quantity": "13.2",
+                    "dv": 3
+                }
+            ],
+            "sku": 76645,
+            "category": "Vegetables",
+            "stock": "In Stock",
+            "buyby": ["pcs", "kgs", "box", "pack"],
+            "delivery": "in 2 days",
+            "deliveryArea": "Czech republic",
+            "freeShipping": true
         }
     ],
     "comments": [

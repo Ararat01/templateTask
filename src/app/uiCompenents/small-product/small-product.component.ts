@@ -11,8 +11,9 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class SmallProductComponent implements OnInit {
   
-  @Input()
-  data!: iproduct
+  @Input() data!: iproduct
+  @Input() stars: boolean = false
+  
 
   constructor(
     private store: Store,
@@ -22,9 +23,8 @@ export class SmallProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addToBasket(product: iproduct) {
-    // this.store.dispatch(allBasket({basket: product as iproduct}))
-    // this.toastr.success('Continue shopping', 'Product added to your basket!');
+  starsCount(count: number) {
+    return [...Array(count)]
   }
 
 }

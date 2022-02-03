@@ -1,16 +1,101 @@
 <app-header></app-header>
-<div class="product container">
-
-</div>
-<div class="relatedProducts container">
-    <div class="relatedProducts__info">
-        <h3 class="relatedProducts__title">Related products</h3>
-        <a class="relatedProducts__btn" routerLink="/">More products <img src="assets/icons/chevron.png" alt=""></a>
+<ng-template *ngIf="currentProduct">
+    <div class="location container">
+        <p>Homepage &nbsp; / &nbsp; product &nbsp; / &nbsp; <span class="location__current">{{currentProduct?.title}}</span></p>
     </div>
-    <div class="relatedProducts__products">
-        <div *ngFor="let product of productsArr.slice(0, 4); let i = index" class="smallProduct">
-            <app-small-product [data]="product"></app-small-product>
+    <div class="product container">
+        <div class="product__images">
+            <img src="assets/images/product.jpg" alt="">
+            <img style="transform: scaleX(-1)" src="assets/images/product.jpg" alt="">
+            <img src="assets/images/product.jpg" alt="">
+            <span class="product__discount-onimg">{{currentProduct?.discount ? '-' + currentProduct?.discount + '%' : ''}}</span>
+        </div>
+        <div class="product__view">
+            <h2 class="product__title">{{currentProduct?.title}}</h2>
+            <div class="product__stars">
+                <img *ngFor="let num of starsCount" src="assets/icons/star-active-yellow.png" alt="none">
+                <img *ngFor="let num of starsPassCount" src="assets/icons/star-passive.png" alt="none">
+            </div>
+            <p class="product__info">{{currentProduct?.info}}</p>
+            <div class="product__details">
+                <table>
+                    <tr>
+                        <th>SKU:</th>
+                        <td>{{currentProduct?.sku}}</td>
+                    </tr>
+                    <tr>
+                        <th>Category:</th>
+                        <td>{{currentProduct?.category}}</td>
+                    </tr>
+                    <tr>
+                        <th>Stock:</th>
+                        <td>{{currentProduct?.stock}}</td>
+                    </tr>
+                    <tr>
+                        <th>Farm:</th>
+                        <td>{{currentProduct?.farm}}</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Freshness:</th>
+                        <td>{{currentProduct?.freshness}}</td>
+                    </tr>
+                    <tr>
+                        <th>Buy by:</th>
+                        <td>{{currentProduct?.buyby?.join(',')}}</td>
+                    </tr>
+                    <tr>
+                        <th>Delivery:</th>
+                        <td>{{currentProduct?.delivery}}</td>
+                    </tr>
+                    <tr>
+                        <th>Delivery area:</th>
+                        <td>{{currentProduct?.deliveryArea}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="product__cart">
+                <div class="product__price">
+                    <h5 class="product__price">{{currentProduct?.price || 0 | discount:(currentProduct?.discount||0)}} {{currentProduct?.currency}}</h5>
+                    <p class="product__price product__price-discounted" *ngIf="currentProduct?.discount">{{currentProduct?.price}} {{currentProduct?.currency}}</p>
+                </div>
+                <div class="product__addToCart">
+                    <button (click)="addToBasket(currentProduct)">+ Add to cart</button>
+                </div>
+            </div>
+            <div class="product__moreInfo">
+                <h3 class="product__description">Description</h3>
+                <h4 class="product__description_title">Origins</h4>
+                <p class="product__description_body">{{currentProduct?.origins}}</p>
+                <h4 class="product__description_title">How to cook</h4>
+                <p class="product__description_body">{{currentProduct?.howToCook}}</p>
+                <h4 class="product__description_title">Full of Vitamins!</h4>
+                <table class="product__vitamin_table">
+                    <tr>
+                        <th>Vitamins</th>
+                        <th>Quantity</th>
+                        <th>% DV</th>
+                    </tr>
+                    <tr *ngFor="let vitamin of currentProduct?.vitamins">
+                        <td>{{vitamin.name}}</td>
+                        <td>{{vitamin.quantity}}</td>
+                        <td>{{vitamin.dv}} %</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
-</div>
+    <div class="relatedProducts container">
+        <div class="section__info">
+            <h3 class="section__title">Related products</h3>
+            <a class="section__btn" routerLink="/">More products <img src="assets/icons/chevron.png" alt=""></a>
+        </div>
+        <div class="relatedProducts__products">
+            <div *ngFor="let product of productsArr.slice(0, 4); let i = index" class="smallProduct">
+                <app-small-product [data]="product"></app-small-product>
+            </div>
+        </div>
+    </div>
+</ng-template>
 <app-footer></app-footer>

@@ -8,29 +8,10 @@
     border-radius: 0px;
     padding: 69px 45px 90px;
     &__info {
-        font-family: "Poppins";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 27px;
-        color: #151515;
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 41.5px;
-        &__btn {
-            font-family: "Poppins";
-            font-style: normal;
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 27px;
-            color: #151515;
-            display: flex;
-            align-items: center;
-            img {
-                transform: rotateZ(270deg);
-            }
-        }
     }
     .slideLeft {
         position: absolute;

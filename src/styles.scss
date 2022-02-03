@@ -21,3 +21,55 @@ body {
 .toast-message {
     font-family: "Poppins";
 }
+
+.section {
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 37px;
+    }
+    &__title {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #151515;
+    }
+    &__btn {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #151515;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+            img {
+                transition: 0.2s;
+                transform: rotateZ(270deg) translateY(5px);
+            }
+        }
+        img {
+            transition: 0.2s;
+            transform: rotateZ(270deg);
+        }
+    }
+}
+
+.location {
+    background-color: white;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 16px 45px;
+    color: #A9A9A9;
+    &__current {
+        color: #151515;
+    }
+}

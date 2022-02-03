@@ -110,7 +110,14 @@
                     border: 2px solid #92C064;
                     border-radius: 12px;
                     padding: 12px 16px;
+                    &:hover {
+                        img {
+                            transition: 0.2s;
+                            transform: rotateZ(270deg) translateY(5px);
+                        }
+                    }
                     img {
+                        transition: 0.2s;
                         transform: rotateZ(270deg);
                     }
                 }
@@ -134,27 +141,6 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 37px;
-    }
-    &__title {
-        font-family: "Poppins";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 27px;
-        color: #151515;
-    }
-    &__btn {
-        font-family: "Poppins";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 27px;
-        color: #151515;
-        display: flex;
-        align-items: center;
-        img {
-            transform: rotateZ(270deg);
-        }
     }
 }
 
@@ -191,27 +177,6 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 37px;
-    }
-    &__title {
-        font-family: "Poppins";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 27px;
-        color: #151515;
-    }
-    &__btn {
-        font-family: "Poppins";
-        font-style: normal;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 27px;
-        color: #151515;
-        display: flex;
-        align-items: center;
-        img {
-            transform: rotateZ(270deg);
-        }
     }
     &__view {
         display: flex;

@@ -1,6 +1,10 @@
 <img class="smallProduct__img" src="assets/images/product.jpg" alt="">
 <h3 class="smallProduct__title">{{data.title}}</h3>
 <h3 class="smallProduct__description">{{data.description}}</h3>
+<div class="smallProduct__stars" *ngIf="stars">
+    <img *ngFor="let num of starsCount(data.stars)" src="assets/icons/star-active.png" alt="none">
+    <img *ngFor="let num of starsCount(5 - data.stars)" src="assets/icons/star-passive.png" alt="none">
+</div>
 <div class="smallProduct__bottom">
     <div class="smallProduct__price">
         <h4>{{data.price | discount:data.discount}}{{data.currency}}</h4>
