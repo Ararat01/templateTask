@@ -12,8 +12,8 @@
         </div>
     </div>
     <div class="hr_vertical"></div>
-    <form class="search__form" action="">
-        <input placeholder="Search Products, categories ..." class="search__form__input" type="text" name="" id="">
+    <form class="search__form" action="" [formGroup]="searchForm" (ngSubmit)="searchCategory()">
+        <input formControlName="category" placeholder="Search Products, categories ..." class="search__form__input" type="text" name="" id="">
         <button class="search__form__btn"><img src="assets/icons/search.png" alt=""></button>
     </form>
 </div>

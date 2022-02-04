@@ -19,7 +19,6 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
   currentProduct!: iproduct | undefined
   id!: number
   subs!: Subscription
-  wish?: boolean
 
   constructor(
     private store: Store,
@@ -31,7 +30,6 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.getProduct()
     this.currentProduct = this.productsArr.find(prod => prod.id == this.id)
-    this.wish = this.currentProduct?.wishlist
     this.subs = this.route.events.pipe(
       filter(e => e instanceof NavigationEnd)
     )
@@ -53,20 +51,19 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
     
   }
 
-  addToBasket(product?: iproduct) {
+  addToBasket(product: iproduct) {
     if(product) {
       this.store.dispatch(allBasket({basket: product as iproduct}))
-      this.toastr.success('Continue shopping', 'Product added to your basket!');
+      this.toastr.success('Continue shopping', 'Product added to your basket!', {
+        timeOut: 1000
+      });
     }
   }
 
-  get starsCount() {
-    return typeof  this.currentProduct?.stars == "number" ? [...Array(this.currentProduct?.stars)] : []
+  starsCount(count: number) {
+    return [...Array(count)]
   }
 
-  get starsPassCount() {
-    return typeof  this.currentProduct?.stars == "number" ? [...Array(5 - this.currentProduct?.stars)] : []
-  }
 
   ngOnDestroy(): void {
     this.subs.unsubscribe()

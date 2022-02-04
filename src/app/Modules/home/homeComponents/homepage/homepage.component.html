@@ -9,7 +9,7 @@
             <li><a href="">Drinks</a></li>
             <li><a href="">Kitchen</a></li>
         </ul>
-        <button class="bestProd__categories__showMore">More products &nbsp; &nbsp; ></button>
+        <button routerLink="/category/All categories"  class="bestProd__categories__showMore">More products &nbsp; &nbsp; ></button>
     </div>
     <div class="bestProd__banners">
         <div class="bestProd__banners__banner banner">
@@ -34,7 +34,7 @@
             <li><a href="">Pharmacy</a></li>
             <li><a href="">Baby</a></li>
         </ul>
-        <button class="bestProd__categories__showMore">More products &nbsp; &nbsp; ></button>
+        <button routerLink="/category/All categories"  class="bestProd__categories__showMore">More products &nbsp; &nbsp; ></button>
     </div>
     <div class="bestProd__products">
         <div *ngFor="let product of productsArr.slice(0, 3); let i = index" class="smallProduct">
@@ -52,7 +52,7 @@
             <li><a href="">Chicken</a></li>
             <li><a href="">Pork</a></li>
         </ul>
-        <button class="bestProd__categories__showMore">More products &nbsp; &nbsp; ></button>
+        <button routerLink="/category/All categories"  class="bestProd__categories__showMore">More products &nbsp; &nbsp; ></button>
     </div>
     <div class="bestProd__products">
         <div *ngFor="let product of productsArr.slice(1, 4);; let i = index" class="smallProduct">
@@ -63,14 +63,13 @@
 <div class="someProd container">
     <div class="someProd__info">
         <h3 class="section__title">Section Headline</h3>
-        <a class="section__btn">Button <img src="assets/icons/chevron.png" alt=""></a>
+        <a routerLink="/category/All categories" class="section__btn">Button <img src="assets/icons/chevron.png" alt=""></a>
     </div>
     <div class="someProd__products">
         <div *ngFor="let product of productsArr.slice(0, 4); let i = index" class="smallProduct">
             <app-small-product [data]="product"></app-small-product>
         </div>
     </div>
-    
 </div>
 <app-comments-slider></app-comments-slider>
 <div class="blogs container">
@@ -112,7 +111,4 @@
         </div>
     </div>
 </div>
-<!-- <div *ngFor="let blog of blogsArr">
-    <h1>{{blog.author}}</h1>
-</div> -->
 <app-footer></app-footer>

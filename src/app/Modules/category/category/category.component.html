@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="location container">
+    <p>Homepage &nbsp; / &nbsp; product &nbsp; / &nbsp; <span class="location__current">{{category}}</span>
+    </p>
+</div>
+<div class="categoryHead container">
+    <h2 class="categoryHead__title">{{category}}</h2>
+    <div class="categoryHead-viewStyle">
+        <button class="categoryHead-viewStyle__btn categoryHead-viewStyle__btn-active">Grid</button>
+        <button class="categoryHead-viewStyle__btn">List</button>
+        <span>{{productsFilteredArr.length}} products</span>
+    </div>
+</div>
+<div class="category container">
+    
+    <div class="category-filters">
+        
+    </div>
+    <div class="category-products" *ngIf="productsFilteredArr.length">
+        <div *ngFor="let product of productsFilteredArr.slice(start, end); let i = index" class="smallProduct">
+            <app-small-product [data]="product" [stars]="true"></app-small-product>
+        </div>
+    </div>
+</div>
+<div class="pagination container">
+    <div class="pagination__pages">Page:
+        <ng-container *ngFor="let number of pagesCount(); let i = index">
+            <button class="pagination__pages__number" (click)="goToPage(i)" [ngClass]="currentPage(i) ? 'active' : '' ">{{number}}</button>
+        </ng-container>
+        
+    </div>
+    <button class="pagination__btn" (click)="showMore()">Show more products</button>
+    <div class="pagination__productsCount"><span>{{productsArr.length}}</span> Products</div>
+</div>
+
+<app-footer></app-footer>

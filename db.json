@@ -52,7 +52,7 @@
                 }
             ],
             "sku": 76645,
-            "category": "Vegetables",
+            "category": "Fruit and vegetables",
             "stock": "In Stock",
             "buyby": ["pcs", "kgs", "box", "pack"],
             "delivery": "in 2 days",
@@ -111,7 +111,7 @@
                 }
             ],
             "sku": 76645,
-            "category": "Vegetables",
+            "category": "Fruit and vegetables",
             "stock": "In Stock",
             "buyby": ["pcs", "kgs", "box", "pack"],
             "delivery": "in 2 days",
@@ -170,7 +170,7 @@
                 }
             ],
             "sku": 76645,
-            "category": "Fruit",
+            "category": "Fruit and vegetables",
             "stock": "In Stock",
             "buyby": ["pcs", "kgs", "box", "pack"],
             "delivery": "in 3 days",
@@ -229,11 +229,483 @@
                 }
             ],
             "sku": 76645,
-            "category": "Vegetables",
+            "category": "Fruit and vegetables",
             "stock": "In Stock",
             "buyby": ["pcs", "kgs", "box", "pack"],
             "delivery": "in 2 days",
             "deliveryArea": "Czech republic",
+            "freeShipping": true
+        },
+        {
+            "id": 5,
+            "title": "Product 5",
+            "farm": "Thramis Farm",
+            "freshness": "2 day old",
+            "stars": 4,
+            "price": 60,
+            "currency": "USD",
+            "discount": 75,
+            "wishlist": true,
+            "description": "Space for a small product description",
+            "info": "Carrots from Tomissy Farm are one of the best on the market. Tomisso and his family are giving a full love to his Bio products. Tomisso’s carrots are growing on the fields naturally.",
+            "origins": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don’t grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible.",
+            "howToCook": "From roasts, salads and soups to casseroles and cakes, Carrots will lend sweetness, texture and colour to an enormous number of recipes.",
+            "vitamins": [
+                {
+                    "name": "Vitamin A equiv.",
+                    "quantity": "735 μg",
+                    "dv": 104
+                },
+                {
+                    "name": "Thiamine (B1)",
+                    "quantity": "0.066 mg",
+                    "dv": 6
+                },
+                {
+                    "name": "Niacin (B3).",
+                    "quantity": "0.983 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Folate (Bg).",
+                    "quantity": "19 μg",
+                    "dv": 5
+                },
+                {
+                    "name": "Vitamin C.",
+                    "quantity": "5.9 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Vitamin E.",
+                    "quantity": "0.66 mg",
+                    "dv": 4
+                },
+                {
+                    "name": "Vitamin K",
+                    "quantity": "13.2",
+                    "dv": 3
+                }
+            ],
+            "sku": 76645,
+            "category": "Fruit and vegetables",
+            "stock": "In Stock",
+            "buyby": ["pcs", "kgs", "box", "pack"],
+            "delivery": "in 2 days",
+            "deliveryArea": "UK republic",
+            "freeShipping": true
+        },
+        {
+            "id": 6,
+            "title": "Product 6",
+            "farm": "Thramis Farm",
+            "freshness": "2 day old",
+            "stars": 3,
+            "price": 100,
+            "currency": "USD",
+            "discount": 67,
+            "wishlist": true,
+            "description": "Space for a small product description",
+            "info": "Carrots from Tomissy Farm are one of the best on the market. Tomisso and his family are giving a full love to his Bio products. Tomisso’s carrots are growing on the fields naturally.",
+            "origins": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don’t grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible.",
+            "howToCook": "From roasts, salads and soups to casseroles and cakes, Carrots will lend sweetness, texture and colour to an enormous number of recipes.",
+            "vitamins": [
+                {
+                    "name": "Vitamin A equiv.",
+                    "quantity": "735 μg",
+                    "dv": 104
+                },
+                {
+                    "name": "Thiamine (B1)",
+                    "quantity": "0.066 mg",
+                    "dv": 6
+                },
+                {
+                    "name": "Niacin (B3).",
+                    "quantity": "0.983 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Folate (Bg).",
+                    "quantity": "19 μg",
+                    "dv": 5
+                },
+                {
+                    "name": "Vitamin C.",
+                    "quantity": "5.9 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Vitamin E.",
+                    "quantity": "0.66 mg",
+                    "dv": 4
+                },
+                {
+                    "name": "Vitamin K",
+                    "quantity": "13.2",
+                    "dv": 3
+                }
+            ],
+            "sku": 76645,
+            "category": "Fruit and vegetables",
+            "stock": "In Stock",
+            "buyby": ["pcs", "kgs", "box", "pack"],
+            "delivery": "in 2 days",
+            "deliveryArea": "UK republic",
+            "freeShipping": true
+        },
+        {
+            "id": 7,
+            "title": "Product 7",
+            "farm": "Thramis Farm",
+            "freshness": "2 day old",
+            "stars": 5,
+            "price": 40,
+            "currency": "USD",
+            "discount": 10,
+            "wishlist": true,
+            "description": "Space for a small product description",
+            "info": "Carrots from Tomissy Farm are one of the best on the market. Tomisso and his family are giving a full love to his Bio products. Tomisso’s carrots are growing on the fields naturally.",
+            "origins": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don’t grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible.",
+            "howToCook": "From roasts, salads and soups to casseroles and cakes, Carrots will lend sweetness, texture and colour to an enormous number of recipes.",
+            "vitamins": [
+                {
+                    "name": "Vitamin A equiv.",
+                    "quantity": "735 μg",
+                    "dv": 104
+                },
+                {
+                    "name": "Thiamine (B1)",
+                    "quantity": "0.066 mg",
+                    "dv": 6
+                },
+                {
+                    "name": "Niacin (B3).",
+                    "quantity": "0.983 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Folate (Bg).",
+                    "quantity": "19 μg",
+                    "dv": 5
+                },
+                {
+                    "name": "Vitamin C.",
+                    "quantity": "5.9 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Vitamin E.",
+                    "quantity": "0.66 mg",
+                    "dv": 4
+                },
+                {
+                    "name": "Vitamin K",
+                    "quantity": "13.2",
+                    "dv": 3
+                }
+            ],
+            "sku": 76645,
+            "category": "Fruit and vegetables",
+            "stock": "In Stock",
+            "buyby": ["pcs", "kgs", "box", "pack"],
+            "delivery": "in 2 days",
+            "deliveryArea": "UK republic",
+            "freeShipping": true
+        },
+        {
+            "id": 8,
+            "title": "Product 8",
+            "farm": "Thramis Farm",
+            "freshness": "1 day old",
+            "stars": 4,
+            "price": 35,
+            "currency": "USD",
+            "discount": 0,
+            "wishlist": true,
+            "description": "Space for a small product description",
+            "info": "Carrots from Tomissy Farm are one of the best on the market. Tomisso and his family are giving a full love to his Bio products. Tomisso’s carrots are growing on the fields naturally.",
+            "origins": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don’t grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible.",
+            "howToCook": "From roasts, salads and soups to casseroles and cakes, Carrots will lend sweetness, texture and colour to an enormous number of recipes.",
+            "vitamins": [
+                {
+                    "name": "Vitamin A equiv.",
+                    "quantity": "735 μg",
+                    "dv": 104
+                },
+                {
+                    "name": "Thiamine (B1)",
+                    "quantity": "0.066 mg",
+                    "dv": 6
+                },
+                {
+                    "name": "Niacin (B3).",
+                    "quantity": "0.983 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Folate (Bg).",
+                    "quantity": "19 μg",
+                    "dv": 5
+                },
+                {
+                    "name": "Vitamin C.",
+                    "quantity": "5.9 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Vitamin E.",
+                    "quantity": "0.66 mg",
+                    "dv": 4
+                },
+                {
+                    "name": "Vitamin K",
+                    "quantity": "13.2",
+                    "dv": 3
+                }
+            ],
+            "sku": 76645,
+            "category": "Fruit and vegetables",
+            "stock": "In Stock",
+            "buyby": ["pcs", "kgs", "box", "pack"],
+            "delivery": "in 2 days",
+            "deliveryArea": "UK republic",
+            "freeShipping": true
+        },
+        {
+            "id": 9,
+            "title": "Product 9",
+            "farm": "Thramis Farm",
+            "freshness": "2 day old",
+            "stars": 4,
+            "price": 30,
+            "currency": "USD",
+            "discount": 5,
+            "wishlist": true,
+            "description": "Space for a small product description",
+            "info": "Carrots from Tomissy Farm are one of the best on the market. Tomisso and his family are giving a full love to his Bio products. Tomisso’s carrots are growing on the fields naturally.",
+            "origins": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don’t grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible.",
+            "howToCook": "From roasts, salads and soups to casseroles and cakes, Carrots will lend sweetness, texture and colour to an enormous number of recipes.",
+            "vitamins": [
+                {
+                    "name": "Vitamin A equiv.",
+                    "quantity": "735 μg",
+                    "dv": 104
+                },
+                {
+                    "name": "Thiamine (B1)",
+                    "quantity": "0.066 mg",
+                    "dv": 6
+                },
+                {
+                    "name": "Niacin (B3).",
+                    "quantity": "0.983 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Folate (Bg).",
+                    "quantity": "19 μg",
+                    "dv": 5
+                },
+                {
+                    "name": "Vitamin C.",
+                    "quantity": "5.9 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Vitamin E.",
+                    "quantity": "0.66 mg",
+                    "dv": 4
+                },
+                {
+                    "name": "Vitamin K",
+                    "quantity": "13.2",
+                    "dv": 3
+                }
+            ],
+            "sku": 76645,
+            "category": "Fruit and vegetables",
+            "stock": "In Stock",
+            "buyby": ["pcs", "kgs", "box", "pack"],
+            "delivery": "in 2 days",
+            "deliveryArea": "UK republic",
+            "freeShipping": true
+        },
+        {
+            "id": 10,
+            "title": "Product 10",
+            "farm": "Thramis Farm",
+            "freshness": "3 day old",
+            "stars": 4,
+            "price": 55,
+            "currency": "USD",
+            "discount": 25,
+            "wishlist": true,
+            "description": "Space for a small product description",
+            "info": "Carrots from Tomissy Farm are one of the best on the market. Tomisso and his family are giving a full love to his Bio products. Tomisso’s carrots are growing on the fields naturally.",
+            "origins": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don’t grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible.",
+            "howToCook": "From roasts, salads and soups to casseroles and cakes, Carrots will lend sweetness, texture and colour to an enormous number of recipes.",
+            "vitamins": [
+                {
+                    "name": "Vitamin A equiv.",
+                    "quantity": "735 μg",
+                    "dv": 104
+                },
+                {
+                    "name": "Thiamine (B1)",
+                    "quantity": "0.066 mg",
+                    "dv": 6
+                },
+                {
+                    "name": "Niacin (B3).",
+                    "quantity": "0.983 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Folate (Bg).",
+                    "quantity": "19 μg",
+                    "dv": 5
+                },
+                {
+                    "name": "Vitamin C.",
+                    "quantity": "5.9 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Vitamin E.",
+                    "quantity": "0.66 mg",
+                    "dv": 4
+                },
+                {
+                    "name": "Vitamin K",
+                    "quantity": "13.2",
+                    "dv": 3
+                }
+            ],
+            "sku": 76645,
+            "category": "Fruit and vegetables",
+            "stock": "In Stock",
+            "buyby": ["pcs", "kgs", "box", "pack"],
+            "delivery": "in 2 days",
+            "deliveryArea": "UK republic",
+            "freeShipping": true
+        },
+        {
+            "id": 11,
+            "title": "Product 11",
+            "farm": "Thramis Farm",
+            "freshness": "1 day old",
+            "stars": 5,
+            "price": 25,
+            "currency": "USD",
+            "discount": 0,
+            "wishlist": true,
+            "description": "Space for a small product description",
+            "info": "Carrots from Tomissy Farm are one of the best on the market. Tomisso and his family are giving a full love to his Bio products. Tomisso’s carrots are growing on the fields naturally.",
+            "origins": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don’t grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible.",
+            "howToCook": "From roasts, salads and soups to casseroles and cakes, Carrots will lend sweetness, texture and colour to an enormous number of recipes.",
+            "vitamins": [
+                {
+                    "name": "Vitamin A equiv.",
+                    "quantity": "735 μg",
+                    "dv": 104
+                },
+                {
+                    "name": "Thiamine (B1)",
+                    "quantity": "0.066 mg",
+                    "dv": 6
+                },
+                {
+                    "name": "Niacin (B3).",
+                    "quantity": "0.983 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Folate (Bg).",
+                    "quantity": "19 μg",
+                    "dv": 5
+                },
+                {
+                    "name": "Vitamin C.",
+                    "quantity": "5.9 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Vitamin E.",
+                    "quantity": "0.66 mg",
+                    "dv": 4
+                },
+                {
+                    "name": "Vitamin K",
+                    "quantity": "13.2",
+                    "dv": 3
+                }
+            ],
+            "sku": 76645,
+            "category": "Fruit and vegetables",
+            "stock": "In Stock",
+            "buyby": ["pcs", "kgs", "box", "pack"],
+            "delivery": "in 2 days",
+            "deliveryArea": "UK republic",
+            "freeShipping": true
+        },
+        {
+            "id": 12,
+            "title": "Product 12",
+            "farm": "Thramis Farm",
+            "freshness": "1 day old",
+            "stars": 4,
+            "price": 35,
+            "currency": "USD",
+            "discount": 20,
+            "wishlist": true,
+            "description": "Space for a small product description",
+            "info": "Carrots from Tomissy Farm are one of the best on the market. Tomisso and his family are giving a full love to his Bio products. Tomisso’s carrots are growing on the fields naturally.",
+            "origins": "We work hard to ensure that the fruit and vegetables we sell are fresh and high in quality. If we don’t grow them ourselves, we source them from carefully chosen suppliers, preferring to buy locally whenever possible.",
+            "howToCook": "From roasts, salads and soups to casseroles and cakes, Carrots will lend sweetness, texture and colour to an enormous number of recipes.",
+            "vitamins": [
+                {
+                    "name": "Vitamin A equiv.",
+                    "quantity": "735 μg",
+                    "dv": 104
+                },
+                {
+                    "name": "Thiamine (B1)",
+                    "quantity": "0.066 mg",
+                    "dv": 6
+                },
+                {
+                    "name": "Niacin (B3).",
+                    "quantity": "0.983 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Folate (Bg).",
+                    "quantity": "19 μg",
+                    "dv": 5
+                },
+                {
+                    "name": "Vitamin C.",
+                    "quantity": "5.9 mg",
+                    "dv": 7
+                },
+                {
+                    "name": "Vitamin E.",
+                    "quantity": "0.66 mg",
+                    "dv": 4
+                },
+                {
+                    "name": "Vitamin K",
+                    "quantity": "13.2",
+                    "dv": 3
+                }
+            ],
+            "sku": 76645,
+            "category": "Fruit and vegetables",
+            "stock": "In Stock",
+            "buyby": ["pcs", "kgs", "box", "pack"],
+            "delivery": "in 2 days",
+            "deliveryArea": "UK republic",
             "freeShipping": true
         }
     ],

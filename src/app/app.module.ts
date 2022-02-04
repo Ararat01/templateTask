@@ -25,6 +25,13 @@ const route: Routes = [
       module => module.ProductDetailModule
     ) 
   }
+  ,
+  {
+    path: 'category',
+    loadChildren: () => import('./Modules/category/category.module').then(
+      module => module.CategoryModule
+    ) 
+  }
 ];
 
 @NgModule({

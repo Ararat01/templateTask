@@ -13,6 +13,7 @@ export class SmallProductComponent implements OnInit {
   
   @Input() data!: iproduct
   @Input() stars: boolean = false
+  @Input() listType: boolean = false
   
 
   constructor(
