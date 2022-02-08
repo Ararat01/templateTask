@@ -6,19 +6,65 @@
 <div class="categoryHead container">
     <h2 class="categoryHead__title">{{category}}</h2>
     <div class="categoryHead-viewStyle">
-        <button class="categoryHead-viewStyle__btn categoryHead-viewStyle__btn-active">Grid</button>
-        <button class="categoryHead-viewStyle__btn">List</button>
+        <button class="categoryHead-viewStyle__btn categoryHead-viewStyle__btn-active" (click)="changeViewStyle(false)">Grid</button>
+        <button class="categoryHead-viewStyle__btn" (click)="changeViewStyle(true)">List</button>
         <span>{{productsFilteredArr.length}} products</span>
     </div>
 </div>
 <div class="category container">
-    
     <div class="category-filters">
+        <form [formGroup]="filtersForm">
+            <div class="brands">
+                <h3 class="brands__title">Brands</h3>
+                <div *ngFor="let brand of brands; let i=index" class="brands__labels">
+                    <label class="checkbox">
+                      <input type="checkbox" [value]="brand.value" #checkbox (change)="brandCheck($event)">
+                      <span><img src="assets/icons/checked.png" alt=""></span>
+                      {{brand.name}}
+                    </label>
+                </div>
+            </div>
+            <div class="rating">
+                <h3 class="rating__title">Rating</h3>
+                <div *ngFor="let rate of rating; let i=index" class="rating__labels">
+                    <label class="checkbox">
+                      <input type="checkbox" [value]="rate.value" #checkbox (change)="brandCheck($event)">
+                      <span><img src="assets/icons/checked.png" alt=""></span>
+                      <img [src]="rate.img" alt="">
+                    </label>
+                </div>
+            </div>
+            <div class="range">
+                <input 
+                    formControlName="min"
+                    class="range-min" 
+                    type="range" 
+                    name="" 
+                    id=""
+                    step="5"
+                    [ngStyle]="{'background': filtersForm.value['max'] >= filtersForm.value['min'] 
+                        ? 'linear-gradient(90deg,  #EBEBEB '+ filtersForm.value['min'] +'%, #6A983C 0%)'
+                        : 'linear-gradient(90deg, #EBEBEB '+ filtersForm.value['max'] +'%,  transparent 0%)', 'z-index': (filtersForm.value['max'] < filtersForm.value['min']) ?  '1' : ''}"
+                />
+                <input 
+                    formControlName="max" 
+                    class="range-max" 
+                    type="range" 
+                    name="" 
+                    id=""
+                    step="5"
+                    [ngStyle]="{'background': filtersForm.value['max'] >= filtersForm.value['min'] 
+                        ? 'linear-gradient(90deg, transparent '+ filtersForm.value['max'] +'%,  #EBEBEB 0%)'
+                        :'linear-gradient(90deg,  #6A983C '+ filtersForm.value['min'] +'%, #EBEBEB 0%)'}"
+                />
+            </div>
+            <button type="button" (click)="reset()">reset</button>
+        </form>
         
     </div>
     <div class="category-products" *ngIf="productsFilteredArr.length">
-        <div *ngFor="let product of productsFilteredArr.slice(start, end); let i = index" class="smallProduct">
-            <app-small-product [data]="product" [stars]="true"></app-small-product>
+        <div *ngFor="let product of productsFilteredArr.slice(start, end); let i = index">
+            <app-small-product [data]="product" [stars]="true" [listType]="productType"></app-small-product>
         </div>
     </div>
 </div>
@@ -27,10 +73,8 @@
         <ng-container *ngFor="let number of pagesCount(); let i = index">
             <button class="pagination__pages__number" (click)="goToPage(i)" [ngClass]="currentPage(i) ? 'active' : '' ">{{number}}</button>
         </ng-container>
-        
     </div>
     <button class="pagination__btn" (click)="showMore()">Show more products</button>
     <div class="pagination__productsCount"><span>{{productsArr.length}}</span> Products</div>
 </div>
-
 <app-footer></app-footer>

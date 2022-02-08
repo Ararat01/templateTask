@@ -4,7 +4,6 @@
     display: flex;
     justify-content: space-between;
     &-filters {
-        background-color: #666666;
         width: 268px;
     }
     &-products {
@@ -90,12 +89,86 @@
 }
 
 
-.smallProduct {
-    width: 269px;
-    height: 323px;
-    border: 1px solid #D1D1D1;
-    border-radius: 12px;
-    padding: 16px 16px 55px 16px;
+
+.range {
     position: relative;
-    margin-bottom: 48px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    width: 251px;
+    input {
+        position: absolute;
+        -webkit-appearance: none;
+        pointer-events: none;
+        background-color: transparent;
+        border-radius: 12px;
+        height: 6px;
+        width: 100%;
+        &::-webkit-slider-thumb {
+            height: 20px;
+            width: 20px;
+            cursor: pointer;
+            border-radius: 50%;
+            background: #FFFFFF;
+            border: 1px solid #D1D1D1;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+            pointer-events: auto;
+            -webkit-appearance: none;
+            position: relative;
+            z-index: 1; 
+        }
+    }
+}
+
+
+.brands, .rating {
+    margin-bottom: 50px;
+    &__title{
+        margin-bottom: 18px;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #151515;
+    }
+}
+
+.checkbox {
+    cursor: pointer;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #151515;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    input {
+        display: none;
+        position: absolute;
+        z-index: -110;
+    }
+    span {
+        height: 20px;
+        width: 20px;
+        display: inline-block;
+        border-radius: 2px;
+        border: 1.5px solid #D1D1D1;
+        position: relative;
+        margin-right: 10px;
+        img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+    input:checked + span {
+        background: #6A983C;
+        border: 1.5px solid #46760A;
+    }
 }

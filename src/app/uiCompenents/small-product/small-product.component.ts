@@ -1,8 +1,9 @@
 import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { iproduct } from 'src/app/interfaces/iproduct';
-import { allBasket } from 'src/app/reducers/basket';
+import { basketProduct, iproduct } from 'src/app/interfaces/iproduct';
 import { ToastrService } from 'ngx-toastr';
+import { wishlistBasket } from 'src/app/reducers/basket';
+import { wishlist } from 'src/app/reducers/products';
 
 @Component({
   selector: 'app-small-product',
@@ -22,6 +23,11 @@ export class SmallProductComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+  }
+
+  wishlist(product: iproduct) {
+    this.store.dispatch(wishlist({id: product.id}))
+    this.store.dispatch(wishlistBasket({id: product.id}))
   }
 
   starsCount(count: number) {

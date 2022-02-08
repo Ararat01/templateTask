@@ -8,6 +8,7 @@ import { SharedModule } from 'src/app/shared/shared/shared.module';
 import { BasketModule } from 'src/app/uiCompenents/basket/basket/basket.module';
 import { SearchInputModule } from 'src/app/uiCompenents/search-input/search-input/search-input.module';
 import { SmallProductModule } from 'src/app/uiCompenents/small-product/small-product/small-product.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +22,9 @@ import { SmallProductModule } from 'src/app/uiCompenents/small-product/small-pro
     SearchInputModule,
     SmallProductModule,
     BasketModule,
-    HeaderModule
+    HeaderModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class CategoryModule { }

@@ -1,15 +1,62 @@
-<img class="smallProduct__img" src="assets/images/product.jpg" alt="">
-<h3 class="smallProduct__title">{{data.title}}</h3>
-<h3 class="smallProduct__description">{{data.description}}</h3>
-<div class="smallProduct__stars" *ngIf="stars">
-    <img *ngFor="let num of starsCount(data.stars)" src="assets/icons/star-active.png" alt="none">
-    <img *ngFor="let num of starsCount(5 - data.stars)" src="assets/icons/star-passive.png" alt="none">
-</div>
-<div class="smallProduct__bottom">
-    <div class="smallProduct__price">
-        <h4>{{data.price | discount:data.discount}}{{data.currency}}</h4>
-        <h4 *ngIf="data.discount" class="smallProduct__price_discounted">{{data.price}}{{data.currency}}</h4>
+   <div class="smallProduct" *ngIf="!listType; else list">
+    <img class="smallProduct__img" src="assets/images/product.jpg" alt="">
+    <h3 class="smallProduct__title">{{data.title}}</h3>
+    <h3 class="smallProduct__description">{{data.description}}</h3>
+    <div class="smallProduct__stars" *ngIf="stars">
+        <img *ngFor="let num of starsCount(data.stars)" src="assets/icons/star-active.png" alt="none">
+        <img *ngFor="let num of starsCount(5 - data.stars)" src="assets/icons/star-passive.png" alt="none">
     </div>
-    <a class="smallProduct__btn" [routerLink]="'/product/' + data.id">Buy now</a>
+    <div class="smallProduct__bottom">
+        <div class="smallProduct__price">
+            <h4>{{data.price | discount:data.discount}}{{data.currency}}</h4>
+            <h4 *ngIf="data.discount" class="smallProduct__price_discounted">{{data.price}}{{data.currency}}</h4>
+        </div>
+        <a class="smallProduct__btn" [routerLink]="'/product/' + data.id">Buy now</a>
+    </div>
+    <span class="smallProduct__discount">{{data.discount ? '-' + data.discount + '%' : ''}}</span>
 </div>
-<span class="smallProduct__discount">{{data.discount ? '-' + data.discount + '%' : ''}}</span>
+<ng-template #list>
+    <div class="bigProduct">
+        <img class="bigProduct__img" src="assets/images/product.jpg" alt="">
+        <div class="bigProduct__info">
+            <h3 class="bigProduct__title">{{data.title}}</h3>
+            <p class="bigProduct__description">{{data.description}}</p>
+            <div class="bigProduct__stars" *ngIf="stars">
+                <img *ngFor="let num of starsCount(data.stars)" src="assets/icons/star-active.png" alt="none">
+                <img *ngFor="let num of starsCount(5 - data.stars)" src="assets/icons/star-passive.png" alt="none">
+            </div>
+            <table class="bigProduct__moreInfo">
+                <tr>
+                    <th>Freshness</th>
+                    <td style="color: #6A983C;">{{data.freshness}}</td>
+                </tr>
+                <tr>
+                    <th>Farm</th>
+                    <td>{{data.farm}}</td>
+                </tr>
+                <tr>
+                    <th>Delivery</th>
+                    <td>{{data.deliveryArea}}</td>
+                </tr>
+                <tr>
+                    <th>Stock</th>
+                    <td style="color: #6A983C;">{{data.stock}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="bigProduct__buy">
+            <div>
+                <h5 class="bigProduct__price">{{data.price | discount:data.discount}}{{data.currency}}</h5>
+                <h6 *ngIf="data.discount" class="bigProduct__price_discounted">{{data.price}}{{data.currency}}</h6>
+            </div>
+            <div class="bigProduct__shippingInfo">
+                <p *ngIf="data.freeShipping" class="bigProduct__shipping">Free Shipping</p>
+                <p class="bigProduct__delivery">Delivery {{data.delivery}}</p>
+            </div>
+            <div class="bigProduct__actions">
+                <button class="bigProduct__detailButton" [routerLink]="'/product/' + data.id">Product Detail ></button>
+                <button class="bigProduct__wishlist" (click)="wishlist(data)"><img [src]="data.wishlist ? 'assets/icons/wishlist-active-big.png' : 'assets/icons/wishlist-passive-big.png'" alt=""> Add to wish list</button>
+            </div>
+        </div>
+    </div>
+</ng-template>
