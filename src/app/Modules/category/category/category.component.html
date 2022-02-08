@@ -13,7 +13,7 @@
 </div>
 <div class="category container">
     <div class="category-filters">
-        <form [formGroup]="filtersForm">
+        <form [formGroup]="filtersForm" (ngSubmit)="apply()">
             <div class="brands">
                 <h3 class="brands__title">Brands</h3>
                 <div *ngFor="let brand of brands; let i=index" class="brands__labels">
@@ -28,37 +28,53 @@
                 <h3 class="rating__title">Rating</h3>
                 <div *ngFor="let rate of rating; let i=index" class="rating__labels">
                     <label class="checkbox">
-                      <input type="checkbox" [value]="rate.value" #checkbox (change)="brandCheck($event)">
+                      <input type="checkbox" [value]="rate.value" #checkbox (change)="starCheck($event)">
                       <span><img src="assets/icons/checked.png" alt=""></span>
                       <img [src]="rate.img" alt="">
                     </label>
                 </div>
             </div>
             <div class="range">
-                <input 
-                    formControlName="min"
-                    class="range-min" 
-                    type="range" 
-                    name="" 
-                    id=""
-                    step="5"
-                    [ngStyle]="{'background': filtersForm.value['max'] >= filtersForm.value['min'] 
-                        ? 'linear-gradient(90deg,  #EBEBEB '+ filtersForm.value['min'] +'%, #6A983C 0%)'
-                        : 'linear-gradient(90deg, #EBEBEB '+ filtersForm.value['max'] +'%,  transparent 0%)', 'z-index': (filtersForm.value['max'] < filtersForm.value['min']) ?  '1' : ''}"
-                />
-                <input 
-                    formControlName="max" 
-                    class="range-max" 
-                    type="range" 
-                    name="" 
-                    id=""
-                    step="5"
-                    [ngStyle]="{'background': filtersForm.value['max'] >= filtersForm.value['min'] 
-                        ? 'linear-gradient(90deg, transparent '+ filtersForm.value['max'] +'%,  #EBEBEB 0%)'
-                        :'linear-gradient(90deg,  #6A983C '+ filtersForm.value['min'] +'%, #EBEBEB 0%)'}"
-                />
+                <div class="range-slider">
+                    <input 
+                        formControlName="min"
+                        class="range-min" 
+                        type="range" 
+                        name="" 
+                        id=""
+                        step="5"
+                        [ngStyle]="{'background': filtersForm.value['max'] >= filtersForm.value['min'] 
+                            ? 'linear-gradient(90deg,  #EBEBEB '+ filtersForm.value['min'] +'%, #6A983C 0%)'
+                            : 'linear-gradient(90deg, #EBEBEB '+ filtersForm.value['max'] +'%,  transparent 0%)', 'z-index': (filtersForm.value['max'] < filtersForm.value['min']) ?  '1' : ''}"
+                    />
+                    <input 
+                        formControlName="max" 
+                        class="range-max" 
+                        type="range" 
+                        name="" 
+                        id=""
+                        step="5"
+                        [ngStyle]="{'background': filtersForm.value['max'] >= filtersForm.value['min'] 
+                            ? 'linear-gradient(90deg, transparent '+ filtersForm.value['max'] +'%,  #EBEBEB 0%)'
+                            :'linear-gradient(90deg,  #6A983C '+ filtersForm.value['min'] +'%, #EBEBEB 0%)'}"
+                    />
+                </div>
+                <div class="range-values">
+                    <div>
+                        <p>Min</p>
+                        <input disabled type="text" [value]="filtersForm.value['max'] >=  filtersForm.value['min'] ? filtersForm.value['min'] : filtersForm.value['max']">
+                    </div>
+                    <div>
+                        <p>Max</p>
+                        <input disabled type="text" [value]="filtersForm.value['max'] >=  filtersForm.value['min'] ? filtersForm.value['max'] : filtersForm.value['min']">
+                    </div>
+                </div>
             </div>
-            <button type="button" (click)="reset()">reset</button>
+            <div class="filter-action">
+                <button class="filter-action__apply" type="submit">Apply</button>
+                <br>
+                <button class="filter-action__reset" type="button" (click)="reset()">reset</button>
+            </div>
         </form>
         
     </div>

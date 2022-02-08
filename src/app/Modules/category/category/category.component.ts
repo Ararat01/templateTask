@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { FormArray, FormBuilder, FormControl } from '@angular/forms';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
@@ -14,7 +14,7 @@ import { productsSelector } from 'src/app/reducers/createReducer/createdReducers
 })
 export class CategoryComponent implements OnInit {
 
-  @ViewChildren('checkbox') chb: any;
+  @ViewChildren('checkbox') chb!: QueryList<ElementRef<HTMLInputElement>>;
 
   category!: string
   categoryInput: string = ''
@@ -27,23 +27,23 @@ export class CategoryComponent implements OnInit {
   standart = this.standartForList
   start: number = 0
   end: number = this.standart
-  test: any = 0
 
   brands: Array<{name: string, value: string}> = [
     {name: 'Grocery Tarm Fields', value: 'Grocery Tarm Fields'},
     {name: 'Local Garden', value: 'Local Garden'},
     {name: 'Taste of Sunshine', value: 'Taste of Sunshine'},
-    {name: 'Fruity Garden', value: 'FruityGarden'}
+    {name: 'Thramis Farm', value: 'Thramis Farm'}
   ]
-  rating: Array<{img: string, value: string}> = [
-    {img: 'assets/icons/5.png', value: '5'},
-    {img: 'assets/icons/4.png', value: '4'},
-    {img: 'assets/icons/3.png', value: '3'},
-    {img: 'assets/icons/2.png', value: '2'},
-    {img: 'assets/icons/1.png', value: '1'}
+  rating: Array<{img: string, value: number}> = [
+    {img: 'assets/icons/5.png', value: 5},
+    {img: 'assets/icons/4.png', value: 4},
+    {img: 'assets/icons/3.png', value: 3},
+    {img: 'assets/icons/2.png', value: 2},
+    {img: 'assets/icons/1.png', value: 1}
   ]
   filtersForm = this.fb.group({
     brands: [[]],
+    stars: [[]],
     min: 0,
     max: 100
   })
@@ -60,6 +60,20 @@ export class CategoryComponent implements OnInit {
     private fb: FormBuilder
   ) { }
   
+  apply() {
+    this.productsFilteredArr = this.productsArr.filter((product: iproduct) => {
+      const discountedPrice = ((product.price / 100)*(100 - product.discount)).toFixed(2)
+      const min = this.filtersForm.value['max'] >= this.filtersForm.value['min'] ? this.filtersForm.value['min'] : this.filtersForm.value['max']
+      const max = this.filtersForm.value['max'] >= this.filtersForm.value['min'] ? this.filtersForm.value['max'] : this.filtersForm.value['min']
+      if((this.filtersForm.value.stars.includes(product.stars) || !this.filtersForm.value.stars.length)
+        && (this.filtersForm.value.brands.includes(product.farm) || !this.filtersForm.value.brands.length)
+        && discountedPrice >= min 
+        && discountedPrice <= max){
+        return true
+      }
+      return false
+    })
+  }
 
   ngOnInit(): void {
     this.activeRoute.params.subscribe(({category, categoryInput}) => {
@@ -91,12 +105,27 @@ export class CategoryComponent implements OnInit {
     }
   }
 
-  reset(){
+  starCheck(e: Event){
+    const star = Number((e.target as HTMLInputElement).value)
+    const checked = (e.target as HTMLInputElement).checked
+    let starsArr: number[] = this.filtersForm.value.stars as number[]
+    if(!checked) {
+      starsArr = starsArr.filter((s: number) => s != star)
+      this.filtersForm.value.stars = starsArr
+    }
+    else {
+      this.filtersForm.value.stars.push(star)
+    }
+  }
+
+  reset() {
     for(let i in this.chb["_results"]) {
       this.chb["_results"][i].nativeElement.checked = false
     }
+    this.productsFilteredArr = this.productsArr
     this.filtersForm.reset(this.initialValues)
     this.filtersForm.value.brands = []
+    this.filtersForm.value.stars = []
   }
 
   changeViewStyle(bool: boolean) {
@@ -108,7 +137,7 @@ export class CategoryComponent implements OnInit {
   }
 
   showMore() {
-    if(this.end >= this.productsArr.length) {
+    if(this.end >= this.productsFilteredArr.length) {
       this.toastr.info('No more product', '', {
         timeOut: 1500
       })
@@ -145,6 +174,7 @@ export class CategoryComponent implements OnInit {
       else {
         this.productsFilteredArr = [...v as iproduct[]].filter(prod => prod.category == this.category || this.category == "All categories");
       }
+      this.apply()
     })
   }
 }

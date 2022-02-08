@@ -121,7 +121,7 @@
         {
             "id": 3,
             "title": "Product 3",
-            "farm": "Thramis Farm",
+            "farm": "Local Garden",
             "freshness": "1 day old",
             "stars": 3,
             "price": 40,
@@ -180,7 +180,7 @@
         {
             "id": 4,
             "title": "Product 4",
-            "farm": "Thramis Farm",
+            "farm": "Local Garden",
             "freshness": "1 day old",
             "stars": 5,
             "price": 89.99,
@@ -239,7 +239,7 @@
         {
             "id": 5,
             "title": "Product 5",
-            "farm": "Thramis Farm",
+            "farm": "Grocery Tarm Fields",
             "freshness": "2 day old",
             "stars": 4,
             "price": 60,
@@ -416,7 +416,7 @@
         {
             "id": 8,
             "title": "Product 8",
-            "farm": "Thramis Farm",
+            "farm": "Grocery Tarm Fields",
             "freshness": "1 day old",
             "stars": 4,
             "price": 35,
@@ -475,7 +475,7 @@
         {
             "id": 9,
             "title": "Product 9",
-            "farm": "Thramis Farm",
+            "farm": "Local Garden",
             "freshness": "2 day old",
             "stars": 4,
             "price": 30,
@@ -534,7 +534,7 @@
         {
             "id": 10,
             "title": "Product 10",
-            "farm": "Thramis Farm",
+            "farm": "Grocery Tarm Fields",
             "freshness": "3 day old",
             "stars": 4,
             "price": 55,
@@ -593,7 +593,7 @@
         {
             "id": 11,
             "title": "Product 11",
-            "farm": "Thramis Farm",
+            "farm": "Taste of Sunshine",
             "freshness": "1 day old",
             "stars": 5,
             "price": 25,
@@ -652,7 +652,7 @@
         {
             "id": 12,
             "title": "Product 12",
-            "farm": "Thramis Farm",
+            "farm": "Taste of Sunshine",
             "freshness": "1 day old",
             "stars": 4,
             "price": 35,
