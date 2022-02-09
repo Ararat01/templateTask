@@ -42,7 +42,7 @@
                         type="range" 
                         name="" 
                         id=""
-                        step="5"
+                        [(ngModel)]="filtersForm.value['max'] >= filtersForm.value['min'] ? filtersForm.value['min'] : filtersForm.value['max']"
                         [ngStyle]="{'background': filtersForm.value['max'] >= filtersForm.value['min'] 
                             ? 'linear-gradient(90deg,  #EBEBEB '+ filtersForm.value['min'] +'%, #6A983C 0%)'
                             : 'linear-gradient(90deg, #EBEBEB '+ filtersForm.value['max'] +'%,  transparent 0%)', 'z-index': (filtersForm.value['max'] < filtersForm.value['min']) ?  '1' : ''}"
@@ -53,7 +53,7 @@
                         type="range" 
                         name="" 
                         id=""
-                        step="5"
+                        [(ngModel)]="filtersForm.value['max'] >= filtersForm.value['min'] ? filtersForm.value['max'] : filtersForm.value['min']"
                         [ngStyle]="{'background': filtersForm.value['max'] >= filtersForm.value['min'] 
                             ? 'linear-gradient(90deg, transparent '+ filtersForm.value['max'] +'%,  #EBEBEB 0%)'
                             :'linear-gradient(90deg,  #6A983C '+ filtersForm.value['min'] +'%, #EBEBEB 0%)'}"
@@ -62,11 +62,13 @@
                 <div class="range-values">
                     <div>
                         <p>Min</p>
-                        <input disabled type="text" [value]="filtersForm.value['max'] >=  filtersForm.value['min'] ? filtersForm.value['min'] : filtersForm.value['max']">
+                        <input type="number" name="" id="" formControlName="min" [(ngModel)]="filtersForm.value['max'] >= filtersForm.value['min'] ? filtersForm.value['min'] : filtersForm.value['max']">
+                        <!-- <input disabled type="text" [value]="filtersForm.value['max'] >=  filtersForm.value['min'] ? filtersForm.value['min'] : filtersForm.value['max']"> -->
                     </div>
                     <div>
                         <p>Max</p>
-                        <input disabled type="text" [value]="filtersForm.value['max'] >=  filtersForm.value['min'] ? filtersForm.value['max'] : filtersForm.value['min']">
+                        <input type="number" name="" id="" formControlName="max" [(ngModel)]="filtersForm.value['max']">
+                        <!-- <input disabled type="text" [value]="filtersForm.value['max'] >=  filtersForm.value['min'] ? filtersForm.value['max'] : filtersForm.value['min']"> -->
                     </div>
                 </div>
             </div>
